@@ -1,0 +1,6 @@
+string name
+int32 tag_id
+geometry_msgs/Polygon search_region
+---
+int32 result
+string status

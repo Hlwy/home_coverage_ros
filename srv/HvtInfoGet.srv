@@ -1,0 +1,5 @@
+string name
+int32 tag_id
+---
+bool success
+HighValueTarget info

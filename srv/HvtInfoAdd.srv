@@ -1,0 +1,7 @@
+int32 tag_id
+string name
+string frame_id
+string label
+---
+bool success
+string status

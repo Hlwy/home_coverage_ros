@@ -1,0 +1,6 @@
+string poly_key
+int32 tag_id
+geometry_msgs/Polygon polygon
+---
+int32 result
+string status

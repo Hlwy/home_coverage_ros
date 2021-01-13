@@ -1,0 +1,20 @@
+# Goal
+int32 tag_id
+geometry_msgs/Polygon search_region
+
+float32 lane_width
+float32 edge_offset
+float32 target_approach_offset
+int32 costmap_max_non_lethal
+bool follow_polygon_border
+bool follow_inner_polygon
+bool boustrophedon_decomposition
+---
+
+# Result
+bool success
+
+---
+
+# Feedback
+string status

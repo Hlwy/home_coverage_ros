@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="border_drive" default="false"/>
+	<arg name="poly_drive" default="true"/>
+	<arg name="boustrophedon_decomposition" default="false"/>
+
+	<node pkg="home_coverage_ros" type="hvt_database_node.py" name="hvt_database_node" output="screen"/>
+
+	<node pkg="home_coverage_ros" type="coverage_planner_server.py" name="coverage_planner_server" output="screen">
+		<!-- <param name="global_costmap_topic" 		value="/costmap_node/costmap/costmap"/> -->
+		<param name="global_costmap_topic" 		value="/move_base/global_costmap/costmap"/>
+		<!-- <param name="local_costmap_topic" 			value="/move_base/local_costmap/costmap"/> -->
+		<param name="local_costmap_topic" 			value="/costmap_node/costmap/costmap"/>
+		<param name="marker_topic" 				value="/clicked_point"/>
+
+		<param name="base_frame" 				value="base_link"/>
+		<param name="global_frame" 				value="map"/>
+
+		<param name="default_lane_width" 			value="0.5"/>
+		<param name="default_edge_offset"			value="0.0"/>
+		<param name="default_target_approach_offset" value="1.0"/>
+		<param name="default_costmap_max_non_lethal" value="70.0"/>
+		<param name="default_follow_polygon_border" 	value="$(arg border_drive)"/>
+		<param name="default_follow_inner_polygon" 	value="$(arg poly_drive)"/>
+		<param name="default_boustrophedon_decomposition" value="$(arg boustrophedon_decomposition)"/>
+	</node>
+</launch>

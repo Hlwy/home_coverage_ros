@@ -1,0 +1,6 @@
+string words
+int32 integer
+float32 double
+---
+int32 result
+string status
